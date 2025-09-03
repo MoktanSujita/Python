@@ -1,14 +1,14 @@
 import random 
 
-def get_choices():
+def get_choices():                #function definition 
   player_choice = input("enter a choice (rock, paper, scissors): ")
-  options = ["rock", "paper", "scissors"]
-  computer_choice = random.choice(options)
+  options = ["rock", "paper", "scissors"]         #creation of  list
+  computer_choice = random.choice(options)        #inbuilt function that choose one vlaue from the list
   
   choices = {"player": player_choice, "computer" : computer_choice}
   return choices
   
-def check_win(player, computer):
+def check_win(player, computer):                #function to determine the winner
   print(f"you chose {player} ,computer chose {computer}")
   if player == computer:
     return "It's a tie!" 
@@ -29,6 +29,6 @@ def check_win(player, computer):
          return "scissors cuts paper! you win."
 
 choices = get_choices()
-result = check_win(choices["player"], choices ["computer"])
+result = check_win(choices["player"], choices ["computer"])    #function call
 print(result)
     
